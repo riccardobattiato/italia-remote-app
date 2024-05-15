@@ -7,9 +7,9 @@ export type Company = {
   name: string;
   url: string;
   career_page_url: string;
-  type: string;
+  type?: string;
   categories: string[];
   remote_policy: "Full" | "Hybrid" | "Optional";
   hiring_policies: Array<"Direct" | "Contract" | "Intermediary">;
-  tags: string[];
+  tags?: string[];
 };
