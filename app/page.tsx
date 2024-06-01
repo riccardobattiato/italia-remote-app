@@ -1,4 +1,5 @@
 import SearchMain from "@/components/molecules/SearchMain";
+import { updateSearch } from "./companies/actions";
 
 export default async function Home() {
   return (
@@ -14,7 +15,7 @@ export default async function Home() {
           </p>
         </div>
         <div className="home__search">
-          <SearchMain />
+          <SearchMain formAction={updateSearch} />
         </div>
       </div>
     </main>
