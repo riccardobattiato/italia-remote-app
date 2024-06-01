@@ -6,7 +6,9 @@ export type CompaniesSearchParams = {
   search?: string;
 };
 
-export const fuseOptions: IFuseOptions<Company> = { keys: ["name"] };
+export const fuseOptions: IFuseOptions<Company> = {
+  keys: ["name", "url"],
+};
 
 export const getCompanies = async (
   searchParams?: CompaniesSearchParams,
