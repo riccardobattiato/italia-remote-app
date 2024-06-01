@@ -1,10 +1,6 @@
-import { getCompanies } from "@/api/github";
 import SearchMain from "@/components/molecules/SearchMain";
 
 export default async function Home() {
-  const companies = await getCompanies();
-  console.log("REPOS", companies);
-
   return (
     <main className="home flex-1 flex flex-col justify-center items-center">
       <div className="px-8 md:w-3/5 xl:w-2/5 mb-10 md:mb-16">
