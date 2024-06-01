@@ -1,6 +1,6 @@
 "use client";
 
-import { Company } from "@/types/api";
+import { Company } from "@/types/companies";
 import { Masonry } from "masonic";
 import CardCompany from "@/components/molecules/CardCompany";
 

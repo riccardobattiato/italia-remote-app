@@ -1,4 +1,4 @@
-import { Company, GetRepoContentsPathResponse } from "@/types/api";
+import { Company, GetRepoContentsPathResponse } from "@/types/companies";
 import { request } from "@octokit/request";
 
 async function getRepoContents(): Promise<GetRepoContentsPathResponse> {

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { GlobeIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
-import { Company } from "@/types/api";
+import { Company } from "@/types/companies";
 import clsx from "clsx";
 import { RenderComponentProps } from "masonic";
 

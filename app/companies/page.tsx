@@ -2,7 +2,7 @@ import ScrollToTop from "@/components/atoms/ScrollToTop";
 import Search from "@/components/organisms/Search";
 import CompaniesGrid from "@/components/organisms/CompaniesGrid";
 import { updateSearch } from "./actions";
-import { getCompanies, type CompaniesSearchParams } from "@/lib/companies";
+import { getCompanies, type CompaniesSearchParams } from "@/lib/search";
 
 type Props = {
   searchParams: CompaniesSearchParams;
