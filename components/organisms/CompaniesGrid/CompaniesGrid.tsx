@@ -15,6 +15,9 @@ const CompaniesGrid = ({ items }: Props) => (
       render={CardCompany}
       maxColumnCount={3}
       columnGutter={32}
+      // https://github.com/jaredLunde/masonic/issues/12
+      key={crypto.randomUUID()}
+      itemKey={(item) => item.url}
     />
   </div>
 );
