@@ -1,8 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Company } from "@/types/companies";
-import { Masonry } from "masonic";
 import CardCompany from "@/components/molecules/CardCompany";
+
+const Masonry = dynamic(
+  () => import("masonic").then((mod) => mod.Masonry<Company>),
+  {
+    ssr: false,
+  },
+);
 
 type Props = {
   items: Company[];
