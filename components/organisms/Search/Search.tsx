@@ -1,17 +1,20 @@
 import SearchBar from "@/components/molecules/SearchBar";
+import Filters from "@/components/molecules/Filters";
 
 type Props = {
-  query?: string;
+  defaultQuery?: string;
   formAction?: (formData: FormData) => void;
 };
 
-const Search = ({ query, formAction }: Props) => {
+const Search = ({ defaultQuery, formAction }: Props) => {
   return (
     <form action={formAction} className="search flex items-center gap-x-4">
       <div className="search__bar flex-1">
-        <SearchBar value={query} />
+        <SearchBar defaultValue={defaultQuery} />
       </div>
-      <div className="search__filters">Filters</div>
+      <div className="search__filters">
+        <Filters />
+      </div>
     </form>
   );
 };

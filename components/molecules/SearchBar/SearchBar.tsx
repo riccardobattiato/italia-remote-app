@@ -3,10 +3,10 @@ import { Input } from "@/components/ui/input";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
 type Props = {
-  value?: string;
+  defaultValue?: string;
 };
 
-const SearchBar = ({ value }: Props) => (
+const SearchBar = ({ defaultValue }: Props) => (
   <div className="search-bar relative">
     <div className="search-bar__button absolute inset-0 right-auto">
       <Button
@@ -22,7 +22,7 @@ const SearchBar = ({ value }: Props) => (
       <Input
         name="query"
         placeholder="Type something..."
-        value={value}
+        defaultValue={defaultValue}
         className="pl-10"
       />
     </div>

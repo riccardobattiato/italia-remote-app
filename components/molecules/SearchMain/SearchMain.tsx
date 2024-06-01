@@ -2,7 +2,6 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { MagnifyingGlassIcon, ArchiveIcon } from "@radix-ui/react-icons";
-import { redirect } from "next/navigation";
 
 export type SearchMainProps = {
   formAction?: (formData: FormData) => void;
