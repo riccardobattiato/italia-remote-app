@@ -15,7 +15,7 @@ export default async function Companies({ searchParams }: Props) {
     <main className="companies-page">
       <div className="container mx-auto pt-8 px-16 lg:px-20">
         <div className="companies-page__search">
-          <Search formAction={updateSearch} />
+          <Search formAction={updateSearch} query={searchParams?.search} />
         </div>
         <div className="companies-page__cards mt-12">
           <CompaniesGrid items={companies} />
