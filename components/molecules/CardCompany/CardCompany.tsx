@@ -11,17 +11,12 @@ import { GlobeIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 import { Company } from "@/types/api";
 import clsx from "clsx";
+import { RenderComponentProps } from "masonic";
 
-export type CardCompanyProps = Company;
+export type CardCompanyProps = RenderComponentProps<Company>;
 
 const CardCompany = ({
-  name,
-  url,
-  career_page_url,
-  type,
-  categories,
-  hiring_policies,
-  tags,
+  data: { name, url, career_page_url, type, categories, hiring_policies, tags },
 }: CardCompanyProps) => {
   return (
     <div className="card-company">
