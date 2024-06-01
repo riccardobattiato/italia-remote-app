@@ -28,7 +28,7 @@ async function downloadJsons(data: GetRepoContentsPathResponse["data"]) {
   }
 }
 
-export async function getCompanies(): Promise<Company[]> {
+export async function fetchCompanies(): Promise<Company[]> {
   // 1. Fetch repo contents
   const repoContents = await getRepoContents();
 

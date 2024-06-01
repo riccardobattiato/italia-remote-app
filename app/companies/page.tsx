@@ -1,11 +1,16 @@
-import { getCompanies } from "@/api/github";
 import ScrollToTop from "@/components/atoms/ScrollToTop";
 import Search from "@/components/organisms/Search";
 import CompaniesGrid from "@/components/organisms/CompaniesGrid";
 import { updateSearch } from "./actions";
+import { getCompanies, type CompaniesSearchParams } from "@/lib/companies";
 
-export default async function Home() {
-  const companies = await getCompanies();
+type Props = {
+  searchParams: CompaniesSearchParams;
+};
+
+export default async function Companies({ searchParams }: Props) {
+  const companies = await getCompanies(searchParams);
+
   return (
     <main className="companies-page">
       <div className="container mx-auto pt-8 px-16 lg:px-20">
